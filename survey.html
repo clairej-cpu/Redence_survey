@@ -443,7 +443,7 @@ function submitSurvey(){
     npsComment = document.getElementById("npsFollowup").querySelector("textarea").value.trim();
   }
 
-  var payload = { consultId: consultId, answers: [], nps: npsScore, npsComment: npsComment };
+  var payload = { consultId: consultId, answers: [], nps: npsScore, npsComment: npsComment, userAgent: (navigator.userAgent || "") };
   document.querySelectorAll('.step[data-step="q"]').forEach(function(s){
     var q = s.dataset.q;
     var score = answers[q];
